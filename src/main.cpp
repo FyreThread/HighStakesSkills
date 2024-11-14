@@ -35,5 +35,6 @@ void autonomous() {
 
 int main() {
     intake.setVelocity(100, percent);
+    initalize();
     Competition.autonomous(autonomous);
 }
