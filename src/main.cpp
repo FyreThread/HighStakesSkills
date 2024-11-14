@@ -7,12 +7,13 @@
 /*                                                                            */
 /*----------------------------------------------------------------------------*/
 #include "vex.h"
+#include <iostream>
 using namespace vex;
 
 // Autonomous
 void autonomous() {
     Drivetrain.setStopping(coast);
-    Drivetrain.setDriveVelocity(80, percent);
+    Drivetrain.setDriveVelocity(50, percent);
     Drivetrain.setTurnVelocity(20, percent);
     intake.spinFor(.5, seconds);
     Drivetrain.driveFor(forward, 11.5, inches);
@@ -22,16 +23,16 @@ void autonomous() {
     mobileRelease();
     Drivetrain.driveFor(reverse, 13, inches);
     mobileGrab();
-    wait(.5, seconds);
+    wait(.25, seconds);
     Drivetrain.setDriveVelocity(60, percent);
     Drivetrain.driveFor(reverse, 7, inches);
     turnRightDegrees(90);
     intake.spin(forward);
-    Drivetrain.driveFor(forward, 12, inches);
-    Drivetrain.driveFor(forward, 10.5, inches);
+    Drivetrain.driveFor(forward, 43, inches);
     turnRightDegrees(90);
-    Drivetrain.driveFor(forward, 20, inches);
-}
+    Drivetrain.driveFor(forward, 17, inches);
+    turnRightDegrees(90);
+    }
 
 int main() {
     intake.setVelocity(100, percent);
